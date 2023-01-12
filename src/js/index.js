@@ -1,12 +1,12 @@
-import { ImagesApiService } from './img_service';
-import { portfolioCard } from '../templates/portfolio_card.hbs';
+import ImagesApiService from './img_service';
+import portfolioCard from '../templates/portfolio_card.hbs';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { Notify } from 'notiflix';
 
 const refs = {
-  searchForm: document.querySelector('.search-from'),
-  galleryEl: document.querySelector('.gallery'),
+  searchForm: document.querySelector('.search-form'),
+  galleryEL: document.querySelector('.gallery'),
   targetEl: document.querySelector('.target-element'),
 };
 
@@ -28,6 +28,9 @@ const observer = new IntersectionObserver(async entries => {
 
   if (targetEl.isIntersecting) {
     try {
+      if (imagesApiService.page > 1) {
+        fetchImages();
+      }
       if (imagesApiService.page === 2) {
         responseToRequest();
       }
@@ -51,7 +54,7 @@ const fetchImages = async function () {
     endOfSearch();
   }
 
-  refs.galleryEl.insertAdjacentHTML('beforeend', portfolioCard(hits));
+  refs.galleryEL.insertAdjacentHTML('beforeend', portfolioCard(hits));
   imagesApiService.incrementPage();
   gallery.refresh();
 };
@@ -75,7 +78,6 @@ function onSearch(ele) {
 function responseToRequest() {
   Notify.success(`Hooray! We found ${totalPages} images.`);
 }
-
 function errorQuery() {
   Notify.failure(
     'Sorry, there are no images matching your search query. Please try again.'
@@ -87,5 +89,5 @@ function endOfSearch() {
 }
 
 function clearGalleryContainer() {
-  refs.galleryEl.innerHTML = '';
+  refs.galleryEL.innerHTML = '';
 }
