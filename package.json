@@ -5,8 +5,7 @@
   "homepage": "https://ArtemKotlar.github.io/goit-js-hw-11",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-11/",
-    "server": "json-server --watch db.json"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,6 @@
   },
   "dependencies": {
     "axios": "^1.2.2",
-    "json-server": "^0.17.1",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.6",
     "simplelightbox": "^2.11.0"
