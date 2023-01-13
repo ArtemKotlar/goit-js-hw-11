@@ -1,4 +1,4 @@
-import ImagesApiService from './img_service';
+import ImagesApiService from './img_service.js';
 import portfolioCard from '../templates/portfolio_card.hbs';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
