@@ -1,3 +1,22 @@
+.color1 {
+    color: #34568a;
+}
+
+.color2 {
+    color: #006693;
+}
+
+.color3 {
+    color: #0085a3;
+}
+
+.color4 {
+    color: #00b5b4;
+}
+
+.color5 {
+    color: #0cf7be;
+}
 
 * {
     box-sizing: border-box;
@@ -8,8 +27,8 @@ body {
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #ebf5f5;
-    color: #000000;
+    background-color: #00b5b4;
+    color: #0cf7be;
     line-height: 1.5;
     margin: 0;
 
@@ -27,7 +46,7 @@ body {
 .block-form {
     display: flex;
     justify-content: center;
-    background-color: #343d8a;
+    background-color: #34568a;
 }
 
 .search-form {
@@ -39,17 +58,18 @@ body {
 .input {
     width: 400px;
     height: 45px;
+    background-color: #00b5b4;
     padding: 15px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: transparent;
     outline: transparent;
     font-size: 16px;
-    color: #000000;
+    color: #34568a;
 }
 
 .button {
-    background-color: #70d5fd;
+    background-color: #00b5b4;
     padding: 10px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -57,7 +77,7 @@ body {
 }
 
 .icon-search {
-    fill: #0b1c36;
+    fill: #34568a;
 }
 
 .gallery {
@@ -70,10 +90,11 @@ body {
 .photo-card {
     width: calc((100% - 60px) / 4);
 
+    background-color: #34568a;
     border-radius: 5px;
-    border: solid 1px #a6dcf1;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    border: solid 2px #ffe46e;
 }
+
 .photo-card-img {
     width: 100%;
     display: block;
@@ -90,4 +111,5 @@ body {
     font-size: 16px;
     display: flex;
     flex-direction: column;
+
 }
